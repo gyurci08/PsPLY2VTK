@@ -1,0 +1,22 @@
+ply
+format ascii 1.0           { ascii/binary, format version number }
+element vertex 5           { define "vertex" element, 6 in file }
+property float32 x         { vertex contains float "x" coordinate }
+property float32 y         { y coordinate is also a vertex property }
+property float32 z         { z coordinate, too }
+element face 3             { there are 3 "face" elements in the file }
+# This format is NOT indexed!
+
+end_header                 { delimits the end of the header }
+# Vertices
+1.0 1.0 0.0
+2.0 2.0 0.0
+3.0 1.0 0.0
+
+3.0 3.0 0.0
+5.0 2.0 0.0
+1 2 3
+#asda
+2 3 4
+
+3 4 5
