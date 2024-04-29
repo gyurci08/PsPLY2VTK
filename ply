@@ -11,6 +11,7 @@ end_header                 { delimits the end of the header }
 # Vertices
 1.0 1.0 0.0
 2.0 2.0 0.0
+#
 3.0 1.0 0.0
 
 3.0 3.0 0.0

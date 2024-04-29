@@ -1,26 +1,25 @@
-$inputFileName = "ply";
 
-
-# Loading the format of the file
-$format = $null;
-# The number of vertices
-$vertices = $null;
-# The number of faces
-$faces = $null;
-
-$dataStart = 100;
-$invalidLineNumber = 0;
-
-
-# Read the file line by line
-$fileLines = Get-Content -Path $inputFileName 
-
-
-$outLines = @()
+$inputFile = $PSScriptRoot + "\ply";
 
 
 
-$fileLines | ForEach-Object {
+$format = $null;				# Loading the format of the file
+$vertices = $null;				# The number of vertices
+$faces = $null;					# The number of faces
+
+$dataStart = 100;				# The line number of first data element; 
+$invalidLineNumber = 0;			# The number of skipped lines
+
+
+
+$fileLines = Get-Content -Path $inputFile 	# Get the lines as objects and store them in an array
+
+
+$outLines = @()								# Array for output
+
+
+
+$fileLines | ForEach-Object {				# Check data in array
     $line = $_;
     $number = $_.ReadCount;
 
